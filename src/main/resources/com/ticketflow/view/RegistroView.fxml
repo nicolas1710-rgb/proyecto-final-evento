@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.RegistroController" prefWidth="600" prefHeight="500">
+    <Label text="Registro de Nuevo Usuario" styleClass="title-label"/>
+    
+    <VBox spacing="10" maxWidth="300" alignment="CENTER_LEFT">
+        <Label text="Nombre Completo:"/>
+        <TextField fx:id="txtNombre" promptText="Juan Pérez"/>
+        
+        <Label text="Correo Electrónico:"/>
+        <TextField fx:id="txtCorreo" promptText="correo@ejemplo.com"/>
+        
+        <Label text="Teléfono:"/>
+        <TextField fx:id="txtTelefono" promptText="3001234567"/>
+
+        <Label text="Contraseña:"/>
+        <PasswordField fx:id="txtContrasena" promptText="*****"/>
+        
+        <Label fx:id="lblMensaje" textFill="#ff5555" wrapText="true"/>
+        
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+            <Button text="Registrar" onAction="#onRegistrar" styleClass="button-primary" prefWidth="140"/>
+            <Button text="Volver" onAction="#volver" styleClass="button-secondary" prefWidth="140"/>
+        </HBox>
+    </VBox>
+</VBox>

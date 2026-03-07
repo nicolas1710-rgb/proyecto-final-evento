@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.ReportesController">
+    <Label text="Generación de Reportes" styleClass="title-label"/>
+    
+    <VBox spacing="15" styleClass="card" maxWidth="400">
+        <Label text="Seleccione el Reporte a Generar" style="-fx-font-weight: bold;"/>
+        
+        <Label text="Tipo de Reporte:"/>
+        <ComboBox fx:id="cmbTipoReporte" maxWidth="Infinity" promptText="-- Seleccionar --"/>
+        
+        <Label text="Formato de Archivo:"/>
+        <ComboBox fx:id="cmbFormato" maxWidth="Infinity" promptText="-- Seleccionar --"/>
+        
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10 0 0 0;">
+            <Button text="Generar y Guardar" onAction="#onGenerarReporte" styleClass="button-primary"/>
+        </HBox>
+        
+        <Label fx:id="lblMensaje" wrapText="true"/>
+    </VBox>
+</VBox>

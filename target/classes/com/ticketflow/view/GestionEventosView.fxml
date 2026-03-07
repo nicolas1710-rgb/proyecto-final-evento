@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.GestionEventosController">
+    <Label text="Gestión de Eventos" styleClass="title-label"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" styleClass="card" prefWidth="350">
+            <Label text="Detalles del Evento" style="-fx-font-weight: bold;"/>
+            
+            <Label text="Nombre:"/>
+            <TextField fx:id="txtNombre"/>
+            
+            <Label text="Descripción:"/>
+            <TextArea fx:id="txtDescripcion" prefRowCount="3"/>
+            
+            <HBox spacing="10">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Fecha:"/>
+                    <DatePicker fx:id="dpFecha" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Hora (HH:mm):"/>
+                    <TextField fx:id="txtHora" prefWidth="80" promptText="20:00"/>
+                </VBox>
+            </HBox>
+            
+            <Label text="Categoría (Factory):"/>
+            <ComboBox fx:id="cmbCategoria" maxWidth="Infinity"/>
+            
+            <Label text="Recinto:"/>
+            <ComboBox fx:id="cmbRecinto" maxWidth="Infinity"/>
+            
+            <Label text="Estado:"/>
+            <ComboBox fx:id="cmbEstado" maxWidth="Infinity"/>
+            
+            <Label fx:id="lblMensaje" textFill="#4CAF50" wrapText="true"/>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Limpiar" onAction="#onLimpiar" styleClass="button-secondary"/>
+                <Button text="Guardar" onAction="#onGuardar" styleClass="button-primary"/>
+            </HBox>
+        </VBox>
+        
+        <TableView fx:id="tvEventos" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="250"/>
+                <TableColumn fx:id="colFecha" text="Fecha/Hora" prefWidth="150"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>

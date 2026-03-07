@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.ticketflow.controller.DashboardAdminController" prefWidth="1200" prefHeight="800">
+    
+    <left>
+        <VBox styleClass="sidebar" prefWidth="250" spacing="5">
+            <Label fx:id="lblBienvenida" text="Panel Admin" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20;"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            
+            <Button text="Métricas del Sistema" onAction="#onMetricas" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Gestión de Eventos" onAction="#onGestionEventos" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Gestión de Recintos" onAction="#onGestionRecintos" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Zonas y Asientos" onAction="#onGestionZonasAsientos" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Gestión de Compras" onAction="#onGestionCompras" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Gestión de Usuarios" onAction="#onGestionUsuarios" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Incidencias PQR" onAction="#onIncidencias" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Generar Reportes" onAction="#onReportes" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            
+            <Region VBox.vgrow="ALWAYS"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            <Button text="Cerrar Sesión" onAction="#onCerrarSesion" styleClass="sidebar-btn" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 20;">
+            <!-- Contenido dinámico -->
+        </StackPane>
+    </center>
+    
+</BorderPane>

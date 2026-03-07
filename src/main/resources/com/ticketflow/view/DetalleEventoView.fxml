@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.DetalleEventoController">
+    
+    <Button text="← Volver" onAction="#onVolver" styleClass="button-secondary"/>
+    
+    <Label fx:id="lblTitulo" styleClass="title-label" text="Nombre Evento"/>
+    
+    <HBox spacing="20">
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Detalles" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblFecha" text="Fecha"/>
+            <Label fx:id="lblCiudad" text="Ciudad"/>
+            <Label fx:id="lblRecinto" text="Recinto"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            <Label text="Descripción:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblDescripcion" wrapText="true"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            <Label text="Políticas:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblPolCancelacion" wrapText="true"/>
+        </VBox>
+        
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS" prefWidth="400">
+            <Label text="Disponibilidad y Boletos" style="-fx-font-weight: bold;"/>
+            <TableView fx:id="tvDisponibilidad" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colZona" text="Zona" prefWidth="150"/>
+                    <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
+                    <TableColumn fx:id="colDisponibles" text="Disponibles" prefWidth="100"/>
+                </columns>
+            </TableView>
+            <Button text="Comprar Seleccionado" onAction="#onComprarNavegar" styleClass="button-primary" maxWidth="Infinity"/>
+        </VBox>
+    </HBox>
+</VBox>

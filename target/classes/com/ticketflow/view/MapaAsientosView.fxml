@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.MapaAsientosController">
+    
+    <Button text="← Volver a Evento" onAction="#onVolver" styleClass="button-secondary"/>
+    
+    <Label text="Selección de Asientos" styleClass="title-label"/>
+    <Label fx:id="lblZonaInfo" styleClass="subtitle-label"/>
+    
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <HBox spacing="5" alignment="CENTER_LEFT"><Region styleClass="asiento-btn, asiento-disponible"/><Label text="Disponible"/></HBox>
+        <HBox spacing="5" alignment="CENTER_LEFT"><Region styleClass="asiento-btn, asiento-reservado"/><Label text="Reservado"/></HBox>
+        <HBox spacing="5" alignment="CENTER_LEFT"><Region styleClass="asiento-btn, asiento-vendido"/><Label text="Vendido"/></HBox>
+    </HBox>
+    
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+        <GridPane fx:id="gridAsientos" hgap="10" vgap="10" alignment="CENTER" style="-fx-padding: 20;"/>
+    </ScrollPane>
+    
+    <Button text="Confirmar y Continuar" onAction="#onConfirmarSeleccion" styleClass="button-primary" maxWidth="Infinity"/>
+</VBox>

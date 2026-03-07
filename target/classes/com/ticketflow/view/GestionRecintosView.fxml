@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.GestionRecintosController">
+    <Label text="Gestión de Recintos" styleClass="title-label"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" styleClass="card" prefWidth="300">
+            <Label text="Detalles del Recinto" style="-fx-font-weight: bold;"/>
+            
+            <Label text="Nombre:"/>
+            <TextField fx:id="txtNombre"/>
+            
+            <Label text="Dirección:"/>
+            <TextField fx:id="txtDireccion"/>
+            
+            <Label text="Ciudad:"/>
+            <TextField fx:id="txtCiudad"/>
+            
+            <Label fx:id="lblMensaje" textFill="#4CAF50" wrapText="true"/>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Limpiar" onAction="#onLimpiar" styleClass="button-secondary"/>
+                <Button text="Guardar" onAction="#onGuardar" styleClass="button-primary"/>
+            </HBox>
+        </VBox>
+        
+        <TableView fx:id="tvRecintos" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="250"/>
+                <TableColumn fx:id="colCiudad" text="Ciudad" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>

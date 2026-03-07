@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.IncidenciasController">
+    <Label text="Gestión de Incidencias PQR" styleClass="title-label"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" styleClass="card" prefWidth="300">
+            <Label text="Nueva Incidencia (Demo)" style="-fx-font-weight: bold;"/>
+            
+            <Label text="Tipo:"/>
+            <ComboBox fx:id="cmbTipo" prefWidth="250"/>
+            
+            <Label text="Descripción:"/>
+            <TextArea fx:id="txtDescripcion" prefRowCount="4"/>
+            
+            <Button text="Registrar Incidencia" onAction="#onRegistrar" styleClass="button-primary"/>
+            <Label fx:id="lblMensaje" textFill="#4CAF50" wrapText="true"/>
+            
+            <Separator style="-fx-background-color: #3e3e4a; -fx-padding: 10 0 10 0;"/>
+            
+            <Button text="Marcar Seleccionada como Resuelta" onAction="#onResolver" styleClass="button-secondary" maxWidth="Infinity"/>
+        </VBox>
+        
+        <TableView fx:id="tvIncidencias" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="120"/>
+                <TableColumn fx:id="colUsuario" text="Usuario" prefWidth="180"/>
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="120"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>

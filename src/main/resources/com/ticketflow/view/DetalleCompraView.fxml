@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.DetalleCompraController">
+    <Button text="← Volver" onAction="#onVolver" styleClass="button-secondary"/>
+    
+    <Label fx:id="lblIdCompra" styleClass="title-label" text="Compra #..."/>
+    
+    <HBox spacing="20">
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Información General" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblEvento" text="Evento"/>
+            <Label fx:id="lblFecha" text="Fecha: "/>
+            <Label fx:id="lblEstado" text="Estado: "/>
+            <Label fx:id="lblTotal" text="Total: " style="-fx-font-weight: bold; -fx-text-fill: #6a5acd;"/>
+            
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            <HBox spacing="10">
+                <Button fx:id="btnCancelar" text="Cancelar Compra" onAction="#onCancelarCompra" styleClass="button-secondary"/>
+                <Button fx:id="btnDescargar" text="Descargar Tickets" onAction="#onDescargarTickets" styleClass="button-primary"/>
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS" prefWidth="400">
+            <Label text="Entradas" style="-fx-font-weight: bold;"/>
+            <TableView fx:id="tvEntradas" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colCodigo" text="Código QR" prefWidth="120"/>
+                    <TableColumn fx:id="colZona" text="Zona" prefWidth="100"/>
+                    <TableColumn fx:id="colAsiento" text="Asiento" prefWidth="80"/>
+                    <TableColumn fx:id="colEstado" text="Estado" prefWidth="90"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>

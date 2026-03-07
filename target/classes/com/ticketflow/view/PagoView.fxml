@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.PagoController">
+    <Label text="Confirmación de Pago" styleClass="title-label"/>
+    
+    <VBox spacing="10" maxWidth="400" styleClass="card" alignment="CENTER">
+        <Label fx:id="lblTotal" text="Total a Pagar: $0.00" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #6a5acd;"/>
+        
+        <Label text="Seleccione Método de Pago:"/>
+        <ComboBox fx:id="cmbMetodoPago" prefWidth="250" promptText="-- Seleccionar --"/>
+        
+        <Label fx:id="lblMensaje" textFill="#ff5555" wrapText="true"/>
+        
+        <HBox spacing="15" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+            <Button text="Cancelar Transacción" onAction="#onCancelar" styleClass="button-secondary" prefWidth="150"/>
+            <Button text="Realizar Pago" onAction="#onPagar" styleClass="button-primary" prefWidth="150"/>
+        </HBox>
+    </VBox>
+</VBox>

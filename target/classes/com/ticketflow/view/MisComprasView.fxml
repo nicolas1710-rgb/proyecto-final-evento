@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.MisComprasController">
+    <Label text="Mis Compras" styleClass="title-label"/>
+    <Label text="Haz doble clic en una compra para ver sus detalles y descargar tickets." styleClass="subtitle-label"/>
+    
+    <TableView fx:id="tvCompras" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="150"/>
+            <TableColumn fx:id="colEvento" text="Evento" prefWidth="250"/>
+            <TableColumn fx:id="colTotal" text="Total ($)" prefWidth="120"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>

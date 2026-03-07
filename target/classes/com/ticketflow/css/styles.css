@@ -1,0 +1,132 @@
+/* Estilo base de TicketFlow - Tema Oscuro Minimalista Moderno */
+.root {
+    -fx-base: #1e1e24;
+    -fx-background-color: #1e1e24;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #f5f5f5;
+}
+
+.text-field, .password-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #2b2b36;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #3e3e4a;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+    -fx-prompt-text-fill: #999999;
+}
+
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #6a5acd; /* Slate Blue */
+}
+
+/* Títulos y textos */
+.label {
+    -fx-text-fill: #f5f5f5;
+}
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+.subtitle-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #b3b3b3;
+}
+
+/* Botones principales */
+.button-primary {
+    -fx-background-color: #6a5acd;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+.button-primary:hover {
+    -fx-background-color: #7b68ee;
+}
+
+/* Botones secundarios / Cancelar */
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: #6a5acd;
+    -fx-text-fill: #6a5acd;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+.button-secondary:hover {
+    -fx-background-color: #2b2b36;
+}
+
+/* Tablas y Listas */
+.table-view, .list-view {
+    -fx-background-color: #1e1e24;
+    -fx-border-color: #3e3e4a;
+}
+.table-view .column-header-background, .table-view .column-header {
+    -fx-background-color: #2b2b36;
+    -fx-border-color: transparent;
+}
+.table-view .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent transparent #3e3e4a transparent;
+}
+.table-row-cell:odd {
+    -fx-background-color: #22222a;
+}
+.table-row-cell:selected {
+    -fx-background-color: #6a5acd;
+}
+
+/* Panel lateral (Menu) */
+.sidebar {
+    -fx-background-color: #15151a;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 2, 0);
+}
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b3b3b3;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20 12 20;
+    -fx-font-size: 15px;
+}
+.sidebar-btn:hover {
+    -fx-background-color: #2b2b36;
+    -fx-text-fill: #ffffff;
+}
+
+/* Cards (Eventos, Métricas) */
+.card {
+    -fx-background-color: #2b2b36;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+/* Asientos en Mapa */
+.asiento-btn {
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-background-radius: 15px;
+}
+.asiento-disponible {
+    -fx-background-color: #4CAF50; /* Green */
+}
+.asiento-reservado {
+    -fx-background-color: #FFC107; /* Amber */
+}
+.asiento-vendido {
+    -fx-background-color: #F44336; /* Red */
+}
+.asiento-bloqueado {
+    -fx-background-color: #9E9E9E; /* Grey */
+}

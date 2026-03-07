@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.CarritoCompraController">
+    
+    <Label text="Carrito de Compra" styleClass="title-label"/>
+    
+    <HBox spacing="20">
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Resumen del Evento" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblEventoDetalle"/>
+        </VBox>
+        
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Servicios Adicionales (Decoradores)" style="-fx-font-weight: bold;"/>
+            <CheckBox fx:id="chkVip" text="Upgrade VIP ($50,000)" onAction="#onServicioCambiado"/>
+            <CheckBox fx:id="chkSeguro" text="Seguro Cancelación ($15,000)" onAction="#onServicioCambiado"/>
+            <CheckBox fx:id="chkMerch" text="Merchandising ($25,000)" onAction="#onServicioCambiado"/>
+            <CheckBox fx:id="chkParqueadero" text="Parqueadero ($20,000)" onAction="#onServicioCambiado"/>
+        </VBox>
+    </HBox>
+    
+    <VBox alignment="CENTER_RIGHT" spacing="10" styleClass="card">
+        <Label fx:id="lblTotal" text="Total: $0.00" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancelar" onAction="#onCancelar" styleClass="button-secondary"/>
+            <Button text="Proceder al Pago" onAction="#onProcederPago" styleClass="button-primary"/>
+        </HBox>
+    </VBox>
+</VBox>

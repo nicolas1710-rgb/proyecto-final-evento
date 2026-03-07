@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.MetricasController">
+    <Label text="Métricas del Sistema" styleClass="title-label"/>
+    
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <VBox spacing="5" styleClass="card" minWidth="200" alignment="CENTER">
+            <Label text="Tasa de Cancelación" style="-fx-font-weight: bold;"/>
+            <Label fx:id="lblTasaCancelacion" text="0.0%" style="-fx-font-size: 24px; -fx-text-fill: #ff5555;"/>
+        </VBox>
+    </HBox>
+    
+    <HBox spacing="15" VBox.vgrow="ALWAYS">
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Ventas Últimos 30 días" style="-fx-font-weight: bold;"/>
+            <BarChart fx:id="chartVentas" VBox.vgrow="ALWAYS">
+                <xAxis><CategoryAxis label="Día"/></xAxis>
+                <yAxis><NumberAxis label="Total ($)"/></yAxis>
+            </BarChart>
+        </VBox>
+        
+        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Top Eventos" style="-fx-font-weight: bold;"/>
+            <PieChart fx:id="chartRecintos" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </HBox>
+</VBox>

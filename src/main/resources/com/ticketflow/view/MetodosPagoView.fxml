@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.MetodosPagoController">
+    <Label text="Mis Métodos de Pago" styleClass="title-label"/>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" styleClass="card" prefWidth="300">
+            <Label text="Agregar Método" style="-fx-font-weight: bold;"/>
+            <Label text="Tipo:"/>
+            <ComboBox fx:id="cmbTipo" prefWidth="250"/>
+            
+            <Label text="Detalles (Ej. **** 1234):"/>
+            <TextField fx:id="txtDetalle"/>
+            
+            <Label fx:id="lblMensaje" textFill="#ff5555" wrapText="true"/>
+            <Button text="Agregar Método" onAction="#onAgregar" styleClass="button-primary"/>
+        </VBox>
+        
+        <TableView fx:id="tvMetodos" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="150"/>
+                <TableColumn fx:id="colDetalle" text="Detalles" prefWidth="250"/>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>

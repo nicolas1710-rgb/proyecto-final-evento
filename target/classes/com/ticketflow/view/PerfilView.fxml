@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.PerfilController">
+    <Label text="Mi Perfil" styleClass="title-label"/>
+    
+    <VBox spacing="10" maxWidth="400" styleClass="card">
+        <Label text="Correo Electrónico (No modificable):"/>
+        <TextField fx:id="txtCorreo" disable="true"/>
+        
+        <Label text="Nombre Completo:"/>
+        <TextField fx:id="txtNombre"/>
+        
+        <Label text="Teléfono:"/>
+        <TextField fx:id="txtTelefono"/>
+        
+        <Label text="Nueva Contraseña (Dejar en blanco para no cambiar):"/>
+        <PasswordField fx:id="txtNuevaContrasena"/>
+        
+        <Label fx:id="lblMensaje" wrapText="true"/>
+        
+        <Button text="Guardar Cambios" onAction="#onGuardar" styleClass="button-primary"/>
+    </VBox>
+</VBox>

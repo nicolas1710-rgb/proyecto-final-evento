@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.GestionUsuariosController">
+    <Label text="Gestión de Usuarios" styleClass="title-label"/>
+    
+    <Label fx:id="lblMetodos" text="Seleccione un usuario para ver detalles." styleClass="subtitle-label"/>
+    
+    <TableView fx:id="tvUsuarios" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre Completo" prefWidth="250"/>
+            <TableColumn fx:id="colCorreo" text="Correo Electrónico" prefWidth="250"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

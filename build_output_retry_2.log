@@ -1,0 +1,133 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.ticketflow:ticketflow >----------------------
+[INFO] Building TicketFlow 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 6 problems were encountered while building the effective model for org.openjfx:javafx-controls:jar:17.0.6 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ticketflow ---
+[INFO] Deleting C:\Users\USUARIO\.gemini\antigravity\scratch\ticketflow\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ticketflow ---
+[INFO] Copying 22 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ticketflow ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 114 source files with javac [debug target 17] to target\classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/util/DataInitializer.java:[19,13] cannot find symbol
+  symbol:   class CompraService
+  location: class com.ticketflow.util.DataInitializer
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[75,69] cannot find symbol
+  symbol:   variable SEGURO
+  location: class com.ticketflow.enums.TipoServicio
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[77,69] cannot find symbol
+  symbol:   variable VIP
+  location: class com.ticketflow.enums.TipoServicio
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[90,32] no suitable constructor found for Entrada(com.ticketflow.model.Zona,com.ticketflow.model.Asiento,double)
+    constructor com.ticketflow.model.Entrada.Entrada() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor com.ticketflow.model.Entrada.Entrada(com.ticketflow.model.Compra,com.ticketflow.model.Zona,com.ticketflow.model.Asiento,double) is not applicable
+      (actual and formal argument lists differ in length)
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MetodosPagoController.java:[32,96] cannot find symbol
+  symbol:   method getDetalle()
+  location: class com.ticketflow.model.MetodoPago
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[52,82] cannot find symbol
+  symbol:   method listarRecintos()
+  location: variable recintoService of type com.ticketflow.service.IRecintoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[121,43] cannot find symbol
+  symbol:   method cancelarEvento(java.util.UUID)
+  location: variable eventoService of type com.ticketflow.service.IEventoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[123,43] cannot find symbol
+  symbol:   method publicarEvento(java.util.UUID)
+  location: variable eventoService of type com.ticketflow.service.IEventoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MisComprasController.java:[52,53] cannot find symbol
+  symbol:   method listarCompras(java.util.UUID)
+  location: variable compraService of type com.ticketflow.service.ICompraService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[37,98] cannot find symbol
+  symbol:   method getFechaCreacion()
+  location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[39,82] cannot find symbol
+  symbol:   method getUsuario()
+  location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[42,61] cannot find symbol
+  symbol:   method isResuelta()
+  location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[70,88] incompatible types: com.ticketflow.model.Usuario cannot be converted to com.ticketflow.enums.TipoIncidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[86,12] cannot find symbol
+  symbol:   method setResuelta(boolean)
+  location: variable inc of type com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[87,12] cannot find symbol
+  symbol:   method setFechaResolucion(java.time.LocalDateTime)
+  location: variable inc of type com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MapaAsientosController.java:[56,28] cannot find symbol
+  symbol:   method getEstado()
+  location: variable asiento of type com.ticketflow.model.Asiento
+[INFO] 16 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.375 s
+[INFO] Finished at: 2026-03-06T11:17:32-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project ticketflow: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/util/DataInitializer.java:[19,13] cannot find symbol
+[ERROR]   symbol:   class CompraService
+[ERROR]   location: class com.ticketflow.util.DataInitializer
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[75,69] cannot find symbol
+[ERROR]   symbol:   variable SEGURO
+[ERROR]   location: class com.ticketflow.enums.TipoServicio
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[77,69] cannot find symbol
+[ERROR]   symbol:   variable VIP
+[ERROR]   location: class com.ticketflow.enums.TipoServicio
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/CarritoCompraController.java:[90,32] no suitable constructor found for Entrada(com.ticketflow.model.Zona,com.ticketflow.model.Asiento,double)
+[ERROR]     constructor com.ticketflow.model.Entrada.Entrada() is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     constructor com.ticketflow.model.Entrada.Entrada(com.ticketflow.model.Compra,com.ticketflow.model.Zona,com.ticketflow.model.Asiento,double) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MetodosPagoController.java:[32,96] cannot find symbol
+[ERROR]   symbol:   method getDetalle()
+[ERROR]   location: class com.ticketflow.model.MetodoPago
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[52,82] cannot find symbol
+[ERROR]   symbol:   method listarRecintos()
+[ERROR]   location: variable recintoService of type com.ticketflow.service.IRecintoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[121,43] cannot find symbol
+[ERROR]   symbol:   method cancelarEvento(java.util.UUID)
+[ERROR]   location: variable eventoService of type com.ticketflow.service.IEventoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/GestionEventosController.java:[123,43] cannot find symbol
+[ERROR]   symbol:   method publicarEvento(java.util.UUID)
+[ERROR]   location: variable eventoService of type com.ticketflow.service.IEventoService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MisComprasController.java:[52,53] cannot find symbol
+[ERROR]   symbol:   method listarCompras(java.util.UUID)
+[ERROR]   location: variable compraService of type com.ticketflow.service.ICompraService
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[37,98] cannot find symbol
+[ERROR]   symbol:   method getFechaCreacion()
+[ERROR]   location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[39,82] cannot find symbol
+[ERROR]   symbol:   method getUsuario()
+[ERROR]   location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[42,61] cannot find symbol
+[ERROR]   symbol:   method isResuelta()
+[ERROR]   location: class com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[70,88] incompatible types: com.ticketflow.model.Usuario cannot be converted to com.ticketflow.enums.TipoIncidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[86,12] cannot find symbol
+[ERROR]   symbol:   method setResuelta(boolean)
+[ERROR]   location: variable inc of type com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/IncidenciasController.java:[87,12] cannot find symbol
+[ERROR]   symbol:   method setFechaResolucion(java.time.LocalDateTime)
+[ERROR]   location: variable inc of type com.ticketflow.model.Incidencia
+[ERROR] /C:/Users/USUARIO/.gemini/antigravity/scratch/ticketflow/src/main/java/com/ticketflow/controller/MapaAsientosController.java:[56,28] cannot find symbol
+[ERROR]   symbol:   method getEstado()
+[ERROR]   location: variable asiento of type com.ticketflow.model.Asiento
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.ticketflow.controller.DashboardUsuarioController" prefWidth="1024" prefHeight="768">
+    
+    <left>
+        <VBox styleClass="sidebar" prefWidth="250" spacing="5">
+            <Label fx:id="lblBienvenida" text="Hola, Usuario" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 20;"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            
+            <Button text="Explorar Eventos" onAction="#onExplorarEventos" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Mis Compras" onAction="#onMisCompras" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Mi Perfil" onAction="#onMiPerfil" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            <Button text="Métodos de Pago" onAction="#onMetodosPago" styleClass="sidebar-btn" maxWidth="Infinity"/>
+            
+            <Region VBox.vgrow="ALWAYS"/>
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            <Button text="Cerrar Sesión" onAction="#onCerrarSesion" styleClass="sidebar-btn" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 20;">
+            <!-- Contenido dinámico aquí -->
+        </StackPane>
+    </center>
+    
+</BorderPane>

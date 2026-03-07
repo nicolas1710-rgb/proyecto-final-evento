@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" styleClass="root" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.ticketflow.controller.GestionZonasController">
+    <Label text="Gestión de Zonas y Asientos" styleClass="title-label"/>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Seleccionar Recinto:"/>
+        <ComboBox fx:id="cmbRecintoFiltro" prefWidth="250" onAction="#onRecintoSeleccionado"/>
+    </HBox>
+    
+    <HBox spacing="15">
+        <VBox spacing="10" styleClass="card" prefWidth="300">
+            <Label text="Detalles de la Zona" style="-fx-font-weight: bold;"/>
+            
+            <Label text="Nombre:"/>
+            <TextField fx:id="txtNombre"/>
+            
+            <Label text="Capacidad:"/>
+            <TextField fx:id="txtCapacidad"/>
+            
+            <Label text="Precio Base ($):"/>
+            <TextField fx:id="txtPrecio"/>
+            
+            <Label text="Tipo de Zona:"/>
+            <ComboBox fx:id="cmbTipo" maxWidth="Infinity"/>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Limpiar" onAction="#onLimpiar" styleClass="button-secondary"/>
+                <Button text="Guardar" onAction="#onGuardar" styleClass="button-primary"/>
+            </HBox>
+            
+            <Separator style="-fx-background-color: #3e3e4a;"/>
+            
+            <Label text="Agregar Asiento a Zona Seleccionada" style="-fx-font-weight: bold;"/>
+            <HBox spacing="5">
+                <VBox>
+                    <Label text="Fila:"/>
+                    <TextField fx:id="txtFilaAsiento" prefWidth="50" promptText="A"/>
+                </VBox>
+                <VBox>
+                    <Label text="Número:"/>
+                    <TextField fx:id="txtNumAsiento" prefWidth="60" promptText="1"/>
+                </VBox>
+            </HBox>
+            <Button text="Agregar Asiento" onAction="#onAgregarAsiento" styleClass="button-secondary" maxWidth="Infinity"/>
+            
+            <Label fx:id="lblMensaje" textFill="#4CAF50" wrapText="true"/>
+        </VBox>
+        
+        <TableView fx:id="tvZonas" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+                <TableColumn fx:id="colCapacidad" text="Capacidad" prefWidth="100"/>
+                <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="120"/>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>
